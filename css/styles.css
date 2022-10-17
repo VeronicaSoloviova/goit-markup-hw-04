@@ -5,6 +5,7 @@
     --button-text: #fff;
     --background: #2F303A;
     --button-background: #F5F4FA;
+    --icon-color: #AFB1B8;
 }
 
 body {
@@ -108,11 +109,23 @@ a {
     margin-left: auto;
 }
 
+.contact-icon {
+    margin-right: 10px;
+    fill: currentColor;
+    cursor: pointer;
+}
+
 .header-contacts .link {
     color: var(--secondary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.5;
+}
+
+.contact-item:hover,
+.contact-item:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
 }
 
 .header-contacts .link:hover,
@@ -122,13 +135,21 @@ a {
     color: var(--accent-color);
 }
 
-/*======================================================герой================================================================*/
+
+/*======================================================HERO================================================================*/
 
 .hero {
-    background-color: var(--background);
+    /*background-color: var(--background);*/
     text-align: center;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -165,6 +186,17 @@ a {
 
 
 /*==============================================section переваги========================================================*/
+
+.icon-block {
+    width: 270px;
+    height: 120px;
+    background-color: var(--button-background);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .section {
     padding-top: 94px;
@@ -248,6 +280,7 @@ a {
 .team-position {
     color: var(--secondary-text-color);
     line-height: 1.2;
+    margin-bottom: 16px;
 }
 
 .name-position {
@@ -269,23 +302,105 @@ a {
     text-align: center;
 }
 
+.sns {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.sns-link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sns-link:hover,
+.sns-link:focus {
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.sns-icon {
+    fill: var(--icon-color);
+}
+
+.sns-link:hover .sns-icon,
+.sns-link:focus .sns-icon {
+    fill: var(--button-text);
+    cursor: pointer;
+}
+
+/*===============================================================CUSTOMERS==================================================*/
+
+.customers {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.customers-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    margin-top: 50px;
+}
+
+.customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--icon-color);
+    border-width: 1px;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--accent-color);
+    border-width: 1px;
+}
+
+.company-icon {
+    fill: var(--icon-color);
+}
+
+.customers-link:hover .company-icon,
+.customers-link:focus .company-icon {
+    fill: var(--accent-color);
+    cursor: pointer;
+}
+
 /*================================================================footer====================================================*/
 
 .footer {
     background-color: var(--background);
     padding-top: 60px;
     padding-bottom: 60px;
-    
+}
+
+.footer-container {
+    display: flex;
 }
 
 .logo-footer {
     color: var(--button-text);
 }
 
+.logo-first {
+    margin-bottom: 20px;
+}
+
 .logo-first,
 .logo-footer {
     display: inline-block;
-    margin-bottom: 20px;
 }
 
 .address {
@@ -306,6 +421,40 @@ a {
     margin-bottom: 9px;
 }
 
+.join {
+    margin-left: 70px;
+}
+
+.title-join {
+    color: var(--button-text);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.join-list {
+    display: flex;
+    column-gap: 10px;
+}
+
+.join-link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);;
+    fill: var(--button-text);
+}
+
+.join-link:hover,
+.join-link:focus {
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
 
 /*========================================================PORTFOLIO PAGE===================================================================*/
 
@@ -353,6 +502,10 @@ a {
     font-size: 18px;
     line-height: 2;
     margin-bottom: 4px;
+}
+
+.work:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .title-description {
